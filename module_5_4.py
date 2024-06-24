@@ -7,6 +7,7 @@ obj = {}
 for i in range(1,41):
    num = 'obj{}'.format(i)
    obj[num] = Building(i)
+   Building.total = obj[num].number
    obj[num].total = obj[num].number
-   print(obj[num].number, obj[num].total)
+   print(f'измененный атрибут класса {Building.total}, ', f'атрибут экземпляра {obj[num].total}.')
 
